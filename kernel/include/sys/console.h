@@ -2,8 +2,8 @@
  * Printing, moving, etc.. (Moving the cursor is not yet implemented.
  */
 
-#ifndef __CONSOLE_H__
-#define __CONSOLE_H__
+#ifndef CONSOLE_H
+#define CONSOLE_H
 
 #include "types.h" /* We include types for the types. */
 
@@ -34,10 +34,9 @@ enum Colors
 
 
 void clear_screen();
-void print_string(string str,int8 color);
+void print_string(string,int8);
 void update_cursor_y();
-void print_char(char c,int8 color);
-
-#include "console.c" /* We also include the `console.h' implementation. */
+void print_char(char,int8);
+void move_cursor(int,int);
 
 #endif /* console.h */
