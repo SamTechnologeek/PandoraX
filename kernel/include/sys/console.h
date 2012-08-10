@@ -39,4 +39,6 @@ void update_cursor_y();
 void print_char(char,int8);
 void move_cursor(int,int);
 
+#include "console.c"
+
 #endif /* console.h */

@@ -7,7 +7,7 @@
  
 harddisk_image_size=$((4*1024*1024)) # 4 megabytes
 harddisk_image="out.img"
-qemu_cmdline="qemu -monitor stdio"
+qemu_cmdline="qemu-system-x86_64"
 kernel_args=""
 kernel_binary="kernel/kernel.bin"
  
@@ -29,7 +29,7 @@ function prereq() {
 prereq x mkfs.vfat dosfstools
 prereq x mcopy mtools
 prereq x syslinux
-prereq f /usr/share/syslinux/mboot.c32 syslinux
+prereq f mboot.c32 syslinux
  
  
 # create image
@@ -42,7 +42,7 @@ mkfs.vfat "$harddisk_image" || fail "could not format harddisk.img"
 syslinux "$harddisk_image" || fail "could not install syslinux"
  
 # copy over mboot.c32 (required for Multiboot)
-mcopy -i "$harddisk_image" /usr/share/syslinux/mboot.c32 ::mboot.c32 || fail "could not copy over mboot.c32"
+mcopy -i "$harddisk_image" mboot.c32 ::mboot.c32 || fail "could not copy over mboot.c32"
  
 # copy over kernel
 mcopy -i "$harddisk_image" "$kernel_binary" ::kernel.bin || fail "could not copy over kernel"

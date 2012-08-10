@@ -1,7 +1,5 @@
 /* console.h implementation */
 
-#include "console.h" 
-
 void clear_screen()
 {
   unsigned int i = 0;
