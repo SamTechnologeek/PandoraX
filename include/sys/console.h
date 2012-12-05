@@ -5,12 +5,7 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
-#include <sys/types.h> /* We include types for the types. */
-
-#define screen_width 120
-#define screen_height 70
-Uint8 *ram = (Uint8 *)0xB8000; /* Video ram */
-Upoint2d cursor = {0,0};
+#include <sys/types.h>
 
 enum Colors
   {
@@ -31,7 +26,6 @@ enum Colors
 	color_yellow = 0xE,
 	color_white = 0xF
   };
-
 
 void clear_screen();
 void print_string(string,int8);

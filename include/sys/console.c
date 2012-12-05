@@ -1,5 +1,11 @@
 /* console.h implementation */
+
 #include <sys/console.h>
+
+#define screen_width 120
+#define screen_height 70
+Uint8 *ram = (Uint8 *)0xB8000; /* Video ram */
+Upoint2d cursor = {0,0};
 
 void clear_screen()
 {
