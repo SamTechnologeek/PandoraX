@@ -9,4 +9,9 @@ all:
 	gcc -c -Iinclude include/sys/console.c -o $(BUILD)/console.o  $(CFLAGS)
 	gcc -c -Iinclude kernel/kernel.c -o $(BUILD)/kern.o $(CFLAGS)
 	ld $(LDFLAGS) kernel/kernel.bin $(BUILD)/console.o $(BUILD)/kern.o $(BUILD)/loader.o
-	cat $(FORIMG) > out.img
+
+clean:
+	rm build/console.o
+	rm build/kern.o
+	rm build/loader.o
+	rm kernel/kernel.bin
