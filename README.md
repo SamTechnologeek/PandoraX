@@ -1,10 +1,12 @@
-** PandoraX **
+ PandoraX 
+==========
 
 PandoraX is just a toy I'm playing with, nothing serious.
 
 Please read LICENSE for the license.
 
-** Using PandoraX **
+ Using PandoraX 
+================
 
 The easiest way to use it is to burn it into a usb stick. Here are the steps
 to do so
