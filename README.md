@@ -9,7 +9,7 @@ Please read LICENSE for the license.
 ================
 
 The easiest way to use it is to burn it into a usb stick. Here are the steps
-to do so
+to do so:
 
 * First, make sure where your usb stick is, mine is at /dev/sdb
 * Now, run gen_img.sh if you haven't already
