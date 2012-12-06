@@ -7,6 +7,9 @@
 
 #include <sys/types.h>
 
+#define screen_width 120
+#define screen_height 70
+
 enum Colors
   {
         color_black = 0x0,
