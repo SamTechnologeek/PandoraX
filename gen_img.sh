@@ -9,7 +9,7 @@ harddisk_image_size=$((4*1024*1024)) # 4 megabytes
 harddisk_image="pandorax.img"
 qemu_cmdline="qemu-system-i386"
 kernel_args=""
-kernel_binary="kernel/kernel.bin"
+kernel_binary="build/kernel.bin"
  
 # ----  end config params  ----
  
